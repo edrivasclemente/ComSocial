@@ -33,7 +33,7 @@ p {
   color: #ffffff !important;
 }
 .list-group-item {
-    background-color: rgba(229, 232, 241, 0.5) !important;
+    background-color: rgba(229, 232, 241, 0.3) !important;
     border: 0px solid #ddd !important;
     font-size: 16px !important;
     font-style: normal !important;
@@ -115,13 +115,15 @@ p {
     content: "";
     z-index: -1;
   }
-
+.btn{
+  letter-spacing: 0;
+}
   .btn-primary {
     background-color: #001970;
     border-color: #001970;
   }
 
-  .pucmm-btn-primary {
+  .pucmm-btn-primary-adm {
     color: #fff;
     background-color: #001970;
     border-color: #001970;
@@ -129,23 +131,35 @@ p {
     text-align: left;
     padding: 15px;
   }
-
+  .pucmm-btn-primary-adm:hover {
+    color: #001970;
+    text-decoration: none;
+    background-color: #ffffff;
+  }
+  .pucmm-btn-primary {
+    color: #fff;
+    background-color: #001970;
+    border-color: #001970;
+    text-align: left;
+    border-radius: 30px;
+  }
+  .pucmm-btn-primary:hover {
+    color: #001970;
+    text-decoration: none;
+    background-color: #ffffff;
+  }
   .pucmm-btn-white {
     color: #001970;
     background-color: #ffffff;
     border-color: #ffffff;
+    border-radius: 30px;
   }
 
   .pucmm-btn-warning {
     color: #001970;
     background-color: #FBFF33;
     border-color: #FBFF33;
-  }
-
-  .pucmm-btn-primary:hover {
-    color: #001970;
-    text-decoration: none;
-    background-color: #ffffff;
+    border-radius: 30px;
   }
 
   ul.menu2-left>.list-group-item {
@@ -256,7 +270,7 @@ p {
         <li class="list-group-item"><a href="https://www.pucmm.edu.do/orientacion">Departamento de Orientación</a></li>
         <li class="list-group-item"><a href="https://www.pucmm.edu.do/admisiones/conexiones-globales">Conexiones Globales</a></li>
       </ul>
-      <a type="button" class="btn pucmm-btn-primary text-uppercase" href="https://www.pucmm.edu.do/admisiones/solicitud-admision">Formulario de Admisión</a>
+      <a type="button" class="btn pucmm-btn-primary-adm text-uppercase" href="https://www.pucmm.edu.do/admisiones/solicitud-admision">Formulario de Admisión</a>
       <hr class="hr-menu">
       <ul class="list-group menu2-left">
         <li class="list-group-item"><a href="https://www.pucmm.edu.do/academico/oferta-grado">Oferta académica</a></li>
@@ -273,7 +287,7 @@ p {
           <li class="active"><a data-toggle="tab" href="#home">Comunicación Social</a></li>
           <li><a data-toggle="tab" href="#menu1">COC & COA</a></li>
           <li><a data-toggle="tab" href="#menu2">Ámbito laboral</a></li>
-          <li><a data-toggle="tab" href="#menu3">Tú Escuela</a></li>
+          <li><a data-toggle="tab" href="#menu3">Tu Escuela</a></li>
         </ul>
         <div class="tab-content">
           <div id="home" class="tab-pane fade in active">
@@ -447,7 +461,6 @@ p {
             </div>
           </div>
           <div id="menu2" class="tab-pane fade"> 
-            <!-- <h3>Programa</h3> -->
             <ul>
               <li>
                 <h3>Comunicación Corporativa</h3>
@@ -634,7 +647,7 @@ Protagonista de la opera prima de una de las primeras directoras mujeres de cine
         <p>En un mundo donde la preparación y las experiencias personales han adquirido relevancia para insertarse en
           un mundo laboral cada vez más global, es importante participar en actividades, programas y vivencias
           internacionales que ayuden a desarrollar</p>
-        <a class="btn pucmm-btn-warning text-uppercase" href="https://www.pucmm.edu.do/movilidad-estudiantil/sobre/oficina-estudiantes-internacionales">Conoce más</a> <a class="btn btn-primary text-uppercase"  href="https://www.pucmm.edu.do/movilidad-estudiantil/estudiantes-pucmm/programas">Ver programa</a> </div>
+        <a class="btn pucmm-btn-warning text-uppercase" href="https://www.pucmm.edu.do/movilidad-estudiantil/sobre/oficina-estudiantes-internacionales">Conoce más</a> <a class="btn pucmm-btn-primary text-uppercase"  href="https://www.pucmm.edu.do/movilidad-estudiantil/estudiantes-pucmm/programas">Ver programa</a> </div>
       <div class="col-md-6"> <img class="img-fluid" src="chica-internacional.png" alt=""> </div>
     </div>
   </div>
