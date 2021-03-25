@@ -39,6 +39,7 @@
     color: #ffffff !important;
   }
   .title-cargo {font-weight: 800;}
+
   .list-group-item {
     background-color: rgba(229, 232, 241, 0.5) !important;
     border: none;
@@ -52,25 +53,24 @@
   }
   .list-group-item a {
     color:#001970 !important;
-    text-decoration: none !important;
-   
+    text-decoration: none !important;   
   }
-  .menul-lef > .list-group-item:first-child {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+  .menul-lef > .list-group-item:first-child,.menul-lef >.list-group-item:last-child {
+    border-radius: 0;
 }
   .menul-lef>.list-group-item {border-bottom: 2px solid #ddd !important;}
   .comcar {
     border-bottom: 3px solid #001970;
     margin-bottom: 20px;
   }
+  .comcar>li>a{padding: 30px 25px;  }
   .comcar>li.active>a,
   .nav-tabs>li.active>a:focus,
   .nav-tabs>li.active>a:hover {
     background-color: #001970 !important;
     font-style: normal !important;
     font-weight: 800 !important;
-    font-size: 14px !important;
+    font-size: 13px !important;
     line-height: 18px !important;
     display: flex !important;
     align-items: center !important;
@@ -78,6 +78,7 @@
     letter-spacing: 0.05em !important;
     text-transform: uppercase !important;
     color: #FFFFFF !important;
+    border-radius: 0px;
   }
   .nav-tabs>li>a {
     font-style: normal !important;
@@ -119,6 +120,8 @@
     margin-right: 10px;
     margin-top: 5px;
     font-weight: 900;
+    padding: 15px 25px;
+    font-size: 12px;
   }
   .btn-primary {
     background-color: #001970;
@@ -207,8 +210,8 @@
     justify-content: center;
   }
   .acreditacion {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .pcajas {
     padding-top: 80px;
@@ -718,7 +721,7 @@
       <div class="row vertical-align">
         <div class="col-md-6">
           <h5>MOVILIDAD ESTUDIANTIL</h5>
-          <h2>Experiencia internacional</h2>
+          <h2 style="margin-bottom: 25px;">Experiencia internacional</h2>
           <p>En un mundo donde la preparación y las experiencias personales han adquirido relevancia para insertarse en
             un mundo laboral cada vez más global, es importante participar en actividades, programas y vivencias
             internacionales que ayuden a desarrollar</p>
