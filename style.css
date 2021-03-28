@@ -241,37 +241,17 @@ ul.menu2-left>.list-group-item {
     align-items: center;
   } 
 }
-
-/* 
-  .nav-tabs>li.active>a:focus,
-  .nav-tabs>li.active>a:hover {
-    background-color: #001970 !important;
-    font-style: normal !important;
-    font-weight: 800 !important;
-    font-size: 13px !important;
-    line-height: 18px !important;
-    display: flex !important;
-    align-items: center !important;
-    text-align: center !important;
-    letter-spacing: 0.05em !important;
-    text-transform: uppercase !important;
-    color: #FFFFFF !important;
-    border-radius: 0px;
-  }
-  .nav-tabs>li>a {
-    font-style: normal !important;
-    font-weight: 800 !important;
-    font-size: 14px !important;
-    line-height: 18px !important;
-    display: flex !important;
-    align-items: center !important;
-    text-align: center !important;
-    letter-spacing: 0.05em !important;
-    text-transform: uppercase !important;
-    color: #001970 !important;
-  }*/
-
-
-
-
-
+.back-mov >iframe{
+  z-index: 1;
+}
+.back-mov {
+  display: grid;
+  padding-right: 45px;
+}
+.back-mov::before {
+  content: url(bgazul.jpg);
+  position: absolute;
+  /* z-index: -1; */
+  right: 110px;
+  width: 630px;
+}
