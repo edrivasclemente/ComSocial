@@ -220,10 +220,12 @@
     padding-top: 80px;
     padding-bottom: 80px;
   }
+
   .vertical-align {
     display: flex;
     align-items: center;
   }
+  @media (max-width: 992px){.vertical-align{display: block;}}
   .carousel-control.left,
   .carousel-control.right {
     background-image: none !important;
@@ -632,6 +634,8 @@
       </div>
     </div>
   </div>
+
+  <!-- egresados -->
   <div class="container-fluid pcajas carousel-bg">
     <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
@@ -648,8 +652,8 @@
           <div class="container">
             <div class="row vertical-align">
               <div class="col-md-12 colheight" style="margin: auto ">
-                <div class="col-md-5 carousel-img text-right"><img class="img-fluid img-circle"
-                    src="Julietta-Rodriguez.jpg"></div>
+              	<div class="row">
+                <div class="col-md-5 carousel-img text-right"><img class="img-fluid img-circle" src="Julietta-Rodriguez.jpg"></div>
                 <div class="col-md-7 carousel-texto">
                   <h2>Hablan nuestros egresados</h2>
                   <p>"Lo que más agradezco de la Carrera de Comunicación Social es que durante mi educación me permitió́
@@ -657,7 +661,6 @@
                     tener una base sólida y de haber contado con todas las herramientas para el pleno ejercicio de mi
                     oficio".</p>
                   <p><span>Julietta Rodriguez. Actriz-productora de cine</span><br>
-
                     <small><strong>Perfil profesional:</strong><br>
                       Protagonista de la opera prima de una de las primeras directoras mujeres de cine titulada ‘’La
                       hija natural’’. Ganó un premio Iris a mejor supporting Actress por Flor de Azúcar, además, fue
@@ -665,6 +668,7 @@
                       más.</small></p>
                 </div>
               </div>
+			</div>
             </div>
           </div>
         </div>
