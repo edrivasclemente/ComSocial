@@ -1,783 +1,571 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Comunicación Social</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous" />
+      <link rel="stylesheet" href="style.css">
+    <title>Comunicacion Social</title>
 </head>
-
 <style>
-  h1,h2,h3,h4,h5,h6 {font-weight: 900;}
-  .colheight {height: 410px;}
-  h1 {
-    Font-size: 50px;
-    Color: #333333;
-  }
-  body {
-    font-size: 16px;
-    color: #333;
-    font-family: Mulish !important;
-  }
-  p {
-    line-height: 1.7;
-    margin: 0 0 25px 0 !important;
-  }
-  .title-esc {
-    padding-top: 70px;
-    position: relative;
-    padding-bottom: 70px;
-    max-width: fit-content;
-  }
-  .title-esc, .title-esc h1 {
-    color: #ffffff !important;
-  }
-  .title-cargo {font-weight: 800;}
-
-  .list-group-item {
-    background-color: rgba(229, 232, 241, 0.5) !important;
-    border: none;
-    font-size: 16px !important;
-    font-style: normal !important;
-    font-weight: normal !important;
-    line-height: 200% !important;
-    color: rgba(0, 0, 0, 0.7) !important;
-    padding: 15px 20px;
-    font-weight: 600 !important;
-  }
-  .list-group-item a {
-    color:#001970 !important;
-    text-decoration: none !important;   
-  }
-  .menul-lef > .list-group-item:first-child,.menul-lef >.list-group-item:last-child {
-    border-radius: 0;
-}
-  .menul-lef>.list-group-item {border-bottom: 2px solid #ddd !important;}
-  .comcar {
-    border-bottom: 3px solid #001970;
-    margin-bottom: 20px;
-  }
-  .comcar>li>a{padding: 30px 25px;  }
-  .comcar>li.active>a,
-  .nav-tabs>li.active>a:focus,
-  .nav-tabs>li.active>a:hover {
-    background-color: #001970 !important;
-    font-style: normal !important;
-    font-weight: 800 !important;
-    font-size: 13px !important;
-    line-height: 18px !important;
-    display: flex !important;
-    align-items: center !important;
-    text-align: center !important;
-    letter-spacing: 0.05em !important;
-    text-transform: uppercase !important;
-    color: #FFFFFF !important;
-    border-radius: 0px;
-  }
-  .nav-tabs>li>a {
-    font-style: normal !important;
-    font-weight: 800 !important;
-    font-size: 14px !important;
-    line-height: 18px !important;
-    display: flex !important;
-    align-items: center !important;
-    text-align: center !important;
-    letter-spacing: 0.05em !important;
-    text-transform: uppercase !important;
-    color: #001970 !important;
-  }
-  .hr-bottom {border-top: 3px solid #001970;}
-  .hr-menu {border-top: 3px solid #eee;}
-  .bgheader {
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-  }
-  .overlay {
-    position: relative;
-    z-index: 1;
-  }
-  .overlay::after {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    content: "";
-    z-index: -1;
-    color: inherit;
-    background-color: rgba(0, 25, 112, .3);
-  }
-  .btn {
-    margin-right: 10px;
-    margin-top: 5px;
-    font-weight: 900;
-    padding: 15px 25px;
-    font-size: 12px;
-  }
-  .btn-primary {
-    background-color: #001970;
-    border-color: #001970;
-  }
-  .pucmm-btn-primary {
-    color: #fff;
-    background-color: #001970;
-    border-color: #001970;
-    text-align: left;
-    border-radius: 30px;
-  }
-  .pucmm-btn-primary:hover {
-    color: #001970;
-    text-decoration: none;
-    background-color: #ffffff;
-  }
-  .pucmm-btn-adm {
-    color: #fff;
-    background-color: #001970;
-    border-color: #001970;
-    width: 100%;
-    text-align: left;
-    padding: 15px;
-  }
-  .pucmm-btn-adm:hover {
-    color: #001970;
-    text-decoration: none;
-    background-color: #ffffff;
-  }
-  .pucmm-btn-white {
-    color: #001970;
-    background-color: #ffffff;
-    border-color: #ffffff;
-    border-radius: 30px;
-  }
-  .pucmm-btn-white:hover {
-    color: #ffffff;
-    text-decoration: none;
-    background-color: #001970;
-    border-color: #001970;
-  }
-  .pucmm-btn-warning {
-    color: #001970;
-    background-color: #FBFF33;
-    border-color: #FBFF33;
-    border-radius: 30px;
-  }
-  .pucmm-btn-warning:hover {
-    color: #ffffff;
-    text-decoration: none;
-    background-color: #001970;
-    border-color: #001970;
-  }
-  .pucmm-btn-primary:hover {
-    color: #001970;
-    text-decoration: none;
-    background-color: #ffffff;
-  }
-  ul.menu2-left {text-transform: uppercase;}
-  ul.menu2-left>.list-group-item {
-    background-color: #ffffff !important;
-    padding-top: 0;
-    padding-bottom: 0;
-    font-size: 12px !important;
-    line-height: 250% !important;
-  }
-  ul.menu2-left>.list-group-item>a:hover {
-    color: rgba(0, 0, 0, 0.7) !important;
-    text-decoration: none;
-    background-color: #ffffff;
-  }
-  ul.menul-lef>.list-group-item>a:hover {
-    color: #001970 !important;
-  }
-  .imgcarrera {
-    width: 354px;
-    height: 219px;
-  }
-  .course-img {
-    width: 450px !important;
-    height: 255px !important;
-  }
-  .video-form {
-    background-color: #e5e8f1;
-    justify-content: center;
-  }
-  .pasantia {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  .pasantia .carousel-indicators{
-    bottom: -35px;
-  }
-  .pcajas {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
-  .vertical-align {
-    display: flex;
-    align-items: center;
-  }
-  @media (max-width: 992px){.vertical-align{display: block;}}
-  .carousel-control.left,
-  .carousel-control.right {
-    background-image: none !important;
-  }
-  .carousel-indicators li {border: 1px solid #001970;}
-  .carousel-indicators .active {background-color: #001970;}
-  .carousel-bg {background: linear-gradient(90deg, #fbff33 31%, #e5e8f1 30%);}
-  .carousel-img>img {width: 300px;}
-  .carousel-bg .carousel-indicators {width: 53%;bottom: 0px !important;}
-  .carousel-texto {color: #001970;}
-  .carousel-texto>p>span {
-    font-size: 16px;
-    font-weight: bold;
-  }
-  ul.columns {
-    list-style-type: disc;
-    -webkit-columns: 3;
-    -moz-columns: 3;
-    columns: 3;
-    list-style-position: inside;
-  }
+    #bgheader{background-image: url(bg.jpg);}
 </style>
-
 <body>
-  <div class="container-fluid bgheader overlay" style="background-image: url('bg.jpg');">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-6">
-        <div class="title-esc">
-          <h3>Licenciaturas en</h3>
-          <h1 style="margin-top: 0;">Comunicación Social</h1>
-          <p>Al comunicarnos proyectamos quienes somos y que queremos ser.<br> ¡Vive la experiencia!</p>
-          <a type="button" class="btn pucmm-btn-warning text-uppercase"
-            href="https://www.pucmm.edu.do/admisiones">Admisiones</a>
-          <a type="button" class="btn pucmm-btn-white text-uppercase"
-            href="https://www.pucmm.edu.do/admisiones/aplicar-grado">Aplicar</a>
+<!-- header -->
+<section>
+    <div class="container-fluid bgheader overlay" id="bgheader" >
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-6">
+                        <div class="title-esc">
+                            <h3>Licenciaturas en</h3>
+                            <h1>Comunicación Social</h1>
+                            <p>Al comunicarnos proyectamos quienes somos y que queremos ser.<br>¡Vive la experiencia!</p>
+                            <a type="button" href="" class="btn pucmm-btn-warning text-uppercase">Admisiones</a>
+                            <a type="button" href="" class="btn pucmm-btn-white text-uppercase">Aplicar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
+</section>
+<!-- fin header -->
+<!-- menu-left -->
+<section class="pcajas">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-4">
+                        <ul class="list-group menul-left">
+                            <li class="list-group-item"><a href="">Admisiones</a></li>
+                            <li class="list-group-item"><a href="">Requisitos</a></li>
+                            <li class="list-group-item"><a href="">Prueba de Admisión</a></li>
+                            <li class="list-group-item"><a href="">Contacto de Admisiones</a></li>
+                            <li class="list-group-item"><a href="">Decanato de Estudiantes</a></li>
+                            <li class="list-group-item"><a href="">Departamento de Orientación</a></li>
+                            <li class="list-group-item"><a href="">Conexiones Globales</a></li>
+                        </ul>
+                        <a type="button" href="" class="btn pucmm-btn-adm text-uppercase">Formulario de Admisión »</a>
+                        <hr class="hr-menu">
+                        <ul class="list-group menu2-left">
+                            <li class="list-group-item" style="color: rgba(0, 0, 0, 0.7);">Oferta académica</li>
+                            <li class="list-group-item"><a href="">Ciencias sociales, humanidades y artes »</a></li>
+                            <li class="list-group-item"><a href="">Ciencias económicas y administrativas »</a></li>
+                            <li class="list-group-item"><a href="">Ciencias e ingeniería »</a></li>
+                            <li class="list-group-item"><a href="">Ciencias de la salud »</a></li>
+                        </ul>
+                        <hr>
+                    </div>
+                    <div class="col-md-8">
+                        <div>
+                            <ul class="nav nav-tabs com-tab">
+                                <li class="active"><a data-toggle="tab" href="#home">Comunicación Social</a></li>
+                                <li><a data-toggle="tab" href="#menu1">COC</a></li>
+                                <li><a data-toggle="tab" href="#menu2">COA</a></li>
+                                <li><a data-toggle="tab" href="#menu3">Ámbito laboral</a></li>
+                                <li><a data-toggle="tab" href="#menu4">Tu Escuela</a></li>
+                              </ul>
+                              <div class="tab-content">
+                                <div id="home" class="tab-pane fade in active">
+                                  <p>Los estudios de grado en Comunica­ción Social se comienzan a impartir en el Campus de Santiago en el
+                                    2002 y en el Campus de Santo Domingo en 2003, y el Consejo Académico de la Pontificia Universidad
+                                    Católica Madre y Maestra (PUCMM) aprueba las concentraciones de Producción Audiovisual y Comunicación
+                                    Corporativa para 2009.</p>
+                                  <p>El 21 de junio de 2016, el Consejo Acadé­mico de la PUCMM ratificó la apertura de las licenciaturas:
+                                    Comunicación Corpora­tiva y Comunicación Audiovisual y Artes Cinematográficas, que se planificaron y
+                                    elaboraron con el enfoque por competen­cias. Esta oferta curricular comienza a impartirse en agosto de
+                                    2016.</p>
+                                  <p>Por igual, ha desarrollado un conjunto de actividades extracurriculares que inclu­yen la Semana Más
+                                    Corta, el Festival de la Comunicación, Artecom, el Seminario de Comunicación Corporativa, Muestra
+                                    Audiovisual de Comunicación Social, Foro de Comunicación Corporativa, Seminario COM, las cuales se
+                                    constituyen en laboratorios que unen a estudiantes y docentes en un diálogo constante, y aportan la
+                                    correlación entre la teoría y la práctica.</p>
+                                </div>
+                                <div id="menu1" class="tab-pane fade">
+                                  <h3>Licenciatura en Comunicación Corporativa (COC)</h3>
+                                  <p>La Licenciatura en Comunicación Corporativa posee un currículo reformulado hacia un modelo de enfoque
+                                    por competencias, lo que permite al estudiantado un 49 por ciento de especialización en el área de la
+                                    Comunicación Corporativa, las Relaciones Públicas y Comunicación Empresarial.</p>
+                                  <p>Esta carrera busca la formación de profesionales que tengan la capacidad de abordar con sentido
+                                    creativo, integral y ético el proceso de comunicación tanto a nivel institucional como organizacional,
+                                    siendo cónsono con el respeto a la dignidad humana. Los conocimientos permiten el desarrollo de
+                                    proyectos puntuales y la creación de propuestas innovadoras, centradas desde una visión periodística
+                                    hemerocrítica.</p>
+                                  <p>La carrera de Comunicación Corporativa ayuda al desarrollo de competencias de planificación y
+                                    evaluación de recursos, producción de contenidos digitales y periodísticos, manejo de las TIC, trabajo
+                                    en equipo y sentido ético.
+                                    Las personas egresadas de Comunicación Corporativa egresadas de la PUCMM se especializan en el diseño,
+                                    gestión y dirección de proyectos y producciones de comunicación manteniendo los principios éticos que
+                                    distinguen a los y las profesionales de la comunicación.</p>
+                                  <a type="button" class="btn pucmm-btn-primary text-uppercase" href="pensum-com-corporativa.pdf">Ver pénsum
+                                    »</a>
+                                  <br>
+                                  <br>
+                                  <div class="embed-responsive embed-responsive-16by9 center-block">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cDCBZXfHNmk"></iframe>
+                                  </div><br>
+                    
+                                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading" role="tab" id="headingOne">
+                                        <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Competencias específicas de
+                                            la titulación en
+                                            Comunicación Corporativa </a> </h4>
+                                      </div>
+                                      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="panel-body">
+                                          <ul>
+                                            <li>Planificación y evaluación de recursos.</li>
+                                            <li>Integración de esquemas epistemológicos de la comunicación.</li>
+                                            <li>Interpretación de la dinámica de los medios de comunicación masivos.</li>
+                                            <li>Valoración del contexto global para el ejercicio de la comunicación.</li>
+                                            <li>Producción de contenidos digitales.</li>
+                                            <li>Producción de contenido periodístico.</li>
+                                            <li>Auditoría de la situación comunicacional de la entidad.</li>
+                                            <li>Planificación de la comunicación corporativa.</li>
+                                            <li>Diseño, gestión y dirección de proyectos y productos de comunicación.</li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading" role="tab" id="headingTwo">
+                                        <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                                            aria-controls="collapseTwo">Ventajas </a> </h4>
+                                      </div>
+                                      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                        <div class="panel-body"> El nuevo pensum de la Licenciatura en Comunicación Corporativa se basa en
+                                          un aprendizaje basado en
+                                          competencias, con un 49 por ciento de materias especializadas en Comunicación Corporativa. Se
+                                          mantiene el bloque de Estudio Generales, desarrollando las competencias claves de la PUCMM,
+                                          complementadas con las competencias prácticas que ofrece la carrera. </div>
+                                      </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading" role="tab" id="headingThree">
+                                        <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                                            aria-controls="collapseThree">Perfil del egresado </a> </h4>
+                                      </div>
+                                      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
+                                        aria-labelledby="headingThree">
+                                        <div class="panel-body">
+                                          <p> El Licenciado/La Licenciada en Comunicación Corporativa, egresado de la PUCMM:</p>
+                                          <p>Está en capacidad de abordar con sentido creativo, integral y ético el proceso de comunicación
+                                            tanto a nivel institucional como organizacional.</p>
+                                          <p>Aplica un criterio crítico a su entorno, eligiendo la mejor alternativa en su actuar,
+                                            contribuyendo a la resolución de problemas en un entorno dinámico.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div id="menu2" class="tab-pane fade">
+                                  <h3>Licenciatura en Comunicación Audiovisual y Artes Cinematográficas (COA)</h3>
+                                  <p>La licenciatura en Comunicación Audiovisual y Artes Cinematográficas se basa en un modelo educativo
+                                    basado en competencias, que garantiza altos niveles de congruencia entre el perfil de egreso y las
+                                    necesidades del mercado laboral.</p>
+                                  <p>Con un 50 por ciento de asignaturas específicas de la carrera, este plan de estudios posee mayor nivel
+                                    de especialización en el área audiovisual, que se complementan con conocimientos necesarios de
+                                    periodismo y de la comunicación en general.</p>
+                                  <p>Se proyecta que durante cuatro años el estudiantado realice producciones que abarcarán las áreas
+                                    propiamente audiovisuales (radio, televisión y cine), así como editoriales y digitales. Así mismo,
+                                    abordarán con sentido creativo, integral, y ético el proceso de comunicación y la producción de
+                                    contenidos.</p>
+                                  <a type="button" class="btn pucmm-btn-primary text-uppercase"
+                                    href="pensum-com-audiovisual-artes-cinematograficas.pdf">Ver pénsum »</a>
+                                  <br>
+                                  <br>
+                                  <div class="embed-responsive embed-responsive-16by9 center-block">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EgQUsvMOBS0"></iframe>
+                                  </div><br>
+                    
+                                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading" role="tab" id="headingOne">
+                                        <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                            href="#collapse1" aria-expanded="true" aria-controls="collapseOne">Competencias específicas de
+                                            la titulación en
+                                            Comunicación Audiovisual y Artes Cinematográficas </a> </h4>
+                                      </div>
+                                      <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                                        <div class="panel-body">
+                                          <ul>
+                                            <li>Planificación y evaluación de recursos.</li>
+                                            <li>Integración de esquemas epistemológicos de la comunicación.</li>
+                                            <li>Interpretación de la dinámica de los medios de comunicación.</li>
+                                            <li>Valoración del contexto global para el ejercicio de la comunicación.</li>
+                                            <li>Producción de contenidos digitales.</li>
+                                            <li>Producción de contenido periodístico.</li>
+                                            <li>Estudio de las audiencias.</li>
+                                            <li>Producción de relatos con identidad nacional.</li>
+                                            <li>Análisis crítico de productos audiovisuales.</li>
+                                            <li>Integración de esquemas epistemológicos de la comunicación audiovisual.</li>
+                                            <li>Escritura de guiones.</li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading" role="tab" id="headingTwo">
+                                        <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion" href="#collapse2" aria-expanded="false"
+                                            aria-controls="collapseTwo">Ventajas </a> </h4>
+                                      </div>
+                                      <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                        <div class="panel-body">
+                                          <p>La Licenciatura en Comunicación Audiovisual y Artes Cinematográficas posee un nuevo pensum
+                                            reestructurado en base a un aprendizaje por competencias.</p>
+                                          <p>Complementando el bloque de Estudios Generales de la PUCMM, la licenciatura cuenta con un 50
+                                            por ciento de materias especializadas en áreas de radio, cine y televisión.</p>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="panel panel-default">
+                                      <div class="panel-heading" role="tab" id="headingThree">
+                                        <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse"
+                                            data-parent="#accordion" href="#collapse3" aria-expanded="false"
+                                            aria-controls="collapseThree">Perfil del egresado </a> </h4>
+                                      </div>
+                                      <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                        <div class="panel-body">
+                                          <p>El Licenciado/La Licenciada en Comunicación Audiovisual y Artes Cinematográficas, egresado de
+                                            la PUCMM:</p>
+                                          <ul>
+                                            <li>En su desempeño profesional, tiene la capacidad de abordar con sentido creativo, integral y
+                                              ético el proceso de comunicación, la producción de contenidos –y su respectivo proceso de
+                                              elaboración-, así como la auscultación constante de las audiencias, teniendo como norte la
+                                              emergencia de crear un lenguaje audiovisual con identidad nacional.</li>
+                                            <li>Posee un alto nivel humanístico y competitivo en el manejo adecuado de los procesos de la
+                                              comunicación audiovisual y la cinematografía, con el comportamiento mental que facilita el
+                                              reconocimiento y el crecimiento de los modos de pensar que utilizamos en la resolución de
+                                              algún problema o en la realización de alguna tarea.</li>
+                                            <li>Tiene conciencia de sus recursos personales, desarrollándolos para superarse en la práctica,
+                                              y aprovechando dichos recursos en el óptimo desempeño de las tareas encomendadas.</li>
+                                            <li>La creación de proyectos audiovisuales y cinematográficos, de radio y televisión aptos para
+                                              un mercado competitivo.</li>
+                                          </ul>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div id="menu3" class="tab-pane fade">
+                                  <ul>
+                                    <li>
+                                      <h3>Comunicación Corporativa</h3>
+                                    </li>
+                                    <p>El Comunicador Corporativo se desempeña en posiciones de gerente o director de Comunicación y/o
+                                      Relaciones Públicas, asesor de imagen corporativo, gestión de la reputación en empresas privadas o
+                                      públicas, tanto nacional como internacionalmente. Tendrá las competencias para el diseño, gestión y
+                                      dirección de proyectos y productos de comunicación para el posicionamiento y gestión de comunicación
+                                      de una empresa.</p>
+                                    <p>Entre otros puestos donde puede realizar su función son: Periodista, organizador de eventos
+                                      corporativos, estratega en la comunicación digital, director de prensa, jefe de medios, entre otros.
+                                    </p>
+                                    <li>
+                                      <h3>Comunicación Audiovisual y Artes Cinematográficas</h3>
+                                    </li>
+                                    <p>El Licenciado/La Licenciada en Comunicación Audiovisual y Artes Cinematográficas se desempaña en el
+                                      creciente mercado audiovisual del país, con oportunidad en el desarrollo internacional, ejerciendo la
+                                      creación de proyectos audiovisuales y cinematográficos, abarcando las áreas de dirección general,
+                                      ejecutiva o en línea.</p>
+                                    <p>Entre algunos de los puestos donde puede realizar su función son: Productor de cine, asesor de guion,
+                                      director de fotografía, director de casting, productor musical, entre otros. </p>
+                                  </ul>
+                                </div>
+                                <div id="menu4" class="tab-pane fade">
+                                  <div class="container-fluid">
+                                    <div class="row">
+                                      <div class="col-md-12">
+                                        <div class="row">
+                                          <div class="col-md-6">
+                                            <h3>Campus de Santo Domingo</h3>
+                                            <h4>Dra. Ana Bélgica Güichardo</h4>
+                                            <span class="title-cargo">Directora</span>
+                                            <p><a href="mailto:anabguichardo@pucmm.edu.do">anabguichardo@pucmm.edu.do</a></p>
+                                            <h4>Lic. Anny Rosa</h4>
+                                            <span class="title-cargo">Secretaria</span> <br>
+                                            <span><a href="mailto:annyrosa@pucmm.edu.do">annyrosa@pucmm.edu.do</a></span>
+                                            <p>Teléfono: 809-535-0111 Ext. Escuela (2254)</p>
+                                          </div>
+                                          <div class="col-md-6">
+                                            <h3>Campus de Santiago</h3>
+                                            <h4>Lic. Alejandro Esteban</h4>
+                                            <span class="title-cargo">Director</span>
+                                            <p><a href="mailto:aesteban@pucmm.edu.do">aesteban@pucmm.edu.do</a></p>
+                                            <h4>Lic. Selene Infante </h4>
+                                            <span class="title-cargo">Secretaria</span><br>
+                                            <span><a href="mailto:sinfante@pucmm.edu.do">sinfante@pucmm.edu.do</a></span>
+                                            <p>Teléfono: 809 580-1962 Ext. Escuela (2254)</p>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <hr class="hr-bottom">
+                              <div class="container-fluid">
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="row">
+                                      <div class="col-md-6"><img class="img-responsive" style="margin-bottom: 15px;" src="Imagen1.jpg" alt="">
+                                      </div>
+                                      <div class="col-md-6"><img class="img-responsive" style="margin-bottom: 15px;" src="Imagen2.jpg" alt="">
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- fin menu-left -->
+
+<!-- video-form -->
+<section class="pcajas video-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row vertical-align">
+                    <div class="col-md-6">
+                        <div class="embed-responsive embed-responsive-16by9"  style="margin-bottom: 15px;">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/H0LVMgCn2ws"></iframe>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                        <script type="text/javascript" defer src="https://form.123formbuilder.com/embed/5852748.js" data-role="form"
+                        data-default-width="650px"></script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- fin video-form -->
+
+<!-- pasantia carousel -->
+<section class="pasantia">
+  <div class="container-fluid">    
+    <div class="row">
+      <div class="col-md-12">
+        <div class="container">
+          <div class="col-xs-12">
+            <h2 class="text-center">Pasantía</h2>      
+              <!-- <div> -->
+                  <div id="myCarousel" class="carousel slide">                
+                      <!-- Carousel items -->
+                      <div class="carousel-inner">
+                          <div class="item active">
+                              <div class="row">
+                                  <div class="col-xs-4"><a href="#" class="thumbnail"><img src="DL.jpg" alt="Image" class="img-responsive"></a>
+                                  </div>
+                                  <div class="col-xs-4"><a href="#" class="thumbnail"><img src="CDN.JPG" alt="Image" class="img-responsive"></a>
+                                  </div>
+                                  <div class="col-xs-4"><a href="#" class="thumbnail"><img src="LD.jpg" alt="Image" class="img-responsive"></a>
+                                  </div>
+                              </div>
+                              <!--/row-->
+                          </div>
+                          <!--/item-->
+                          <div class="item">
+                              <div class="row">
+                                  <div class="col-xs-4"><a href="#x" class="thumbnail"><img src="NLINK.jpg" alt="Image" class="img-responsive"></a>
+                                  </div>
+                                  <div class="col-xs-4"><a href="#x" class="thumbnail"><img src="mediaticos.jpg" alt="Image" class="img-responsive"></a>
+                                  </div>
+                                  <div class="col-xs-4"><a href="#x" class="thumbnail"><img src="sc.jpg" alt="Image" class="img-responsive"></a>
+                                  </div>
+                              </div>
+                              <!--/row-->
+                          </div>
+                          <!--/item-->
+                          <div class="item">
+                              <div class="row">
+                                  <div class="col-xs-4"><a href="#x" class="thumbnail"><img src="TRA.jpg" alt="Image" class="img-responsive"></a>
+                                  </div>
+                              </div>
+                              <!--/row-->
+                          </div>
+                          <!--/item-->
+                      </div>
+                      <!--/carousel-inner--> 
+                      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>      
+                      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                  </div>
+                  <!--/myCarousel-->
+              <!-- </div> -->
+              <!--/well-->
+          </div>
+      </div>
       </div>
     </div>
   </div>
-  <br>
-  <div class="container pcajas">
-    <div class="row">
-      <div class="col-md-4">
-        <ul class="list-group menul-lef">
-          <li class="list-group-item"><a href="https://www.pucmm.edu.do/admisiones">Admisiones</a></li>
-          <li class="list-group-item"><a href="https://www.pucmm.edu.do/admisiones/aplicar-grado">Requisitos</a></li>
-          <li class="list-group-item"><a href="https://www.pucmm.edu.do/admisiones/pruebas-admision">Prueba de
-              Admisión</a></li>
-          <li class="list-group-item"><a href="https://www.pucmm.edu.do/admisiones/contactos">Contacto de Admisiones</a>
-          </li>
-          <li class="list-group-item"><a href="https://www.pucmm.edu.do/decanato">Decanato de Estudiantes</a></li>
-          <li class="list-group-item"><a href="https://www.pucmm.edu.do/orientacion">Departamento de Orientación</a>
-          </li>
-          <li class="list-group-item"><a href="https://www.pucmm.edu.do/admisiones/conexiones-globales">Conexiones
-              Globales</a></li>
-        </ul>
-        <a type="button" class="btn pucmm-btn-adm text-uppercase"
-          href="https://www.pucmm.edu.do/admisiones/solicitud-admision">Formulario de Admisión »</a>
-        <hr class="hr-menu">
-        <ul class="list-group menu2-left">
-          <li class="list-group-item">Oferta académica</li>
-          <li class="list-group-item"><a href="https://humanidades.pucmm.edu.do/">Ciencias sociales, humanidades y artes
-              »</a></li>
-          <li class="list-group-item"><a href="https://economicas.pucmm.edu.do/">Ciencias económicas y administrativas
-              »</a></li>
-          <li class="list-group-item"><a href="https://www.pucmm.edu.do/ingenierias">Ciencias e ingeniería »</a></li>
-          <li class="list-group-item"><a href="https://www.pucmm.edu.do/salud">Ciencias de la salud »</a></li>
-        </ul>
-        <hr class="hr-menu">
-        <a href="http://www.instagram.com/expresatepucmm" target="_blank">
-          <i class="fab fa-instagram-square"></i> @expresatepucmm </a>
-          <hr class="hr-menu">
-      </div>
-      <div class="col-md-8">
-        <div>
-          <ul class="nav nav-tabs comcar">
-            <li class="active"><a data-toggle="tab" href="#home">Comunicación Social</a></li>
-            <li><a data-toggle="tab" href="#menu1">COC</a></li>
-            <li><a data-toggle="tab" href="#menu2">COA</a></li>
-            <li><a data-toggle="tab" href="#menu3">Ámbito laboral</a></li>
-            <li><a data-toggle="tab" href="#menu4">Tu Escuela</a></li>
-          </ul>
-          <div class="tab-content">
-            <div id="home" class="tab-pane fade in active">
-              <p>Los estudios de grado en Comunica­ción Social se comienzan a impartir en el Campus de Santiago en el
-                2002 y en el Campus de Santo Domingo en 2003, y el Consejo Académico de la Pontificia Universidad
-                Católica Madre y Maestra (PUCMM) aprueba las concentraciones de Producción Audiovisual y Comunicación
-                Corporativa para 2009.</p>
-              <p>El 21 de junio de 2016, el Consejo Acadé­mico de la PUCMM ratificó la apertura de las licenciaturas:
-                Comunicación Corpora­tiva y Comunicación Audiovisual y Artes Cinematográficas, que se planificaron y
-                elaboraron con el enfoque por competen­cias. Esta oferta curricular comienza a impartirse en agosto de
-                2016.</p>
-              <p>Por igual, ha desarrollado un conjunto de actividades extracurriculares que inclu­yen la Semana Más
-                Corta, el Festival de la Comunicación, Artecom, el Seminario de Comunicación Corporativa, Muestra
-                Audiovisual de Comunicación Social, Foro de Comunicación Corporativa, Seminario COM, las cuales se
-                constituyen en laboratorios que unen a estudiantes y docentes en un diálogo constante, y aportan la
-                correlación entre la teoría y la práctica.</p>
-            </div>
-            <div id="menu1" class="tab-pane fade">
-              <h3>Licenciatura en Comunicación Corporativa (COC)</h3>
-              <p>La Licenciatura en Comunicación Corporativa posee un currículo reformulado hacia un modelo de enfoque
-                por competencias, lo que permite al estudiantado un 49 por ciento de especialización en el área de la
-                Comunicación Corporativa, las Relaciones Públicas y Comunicación Empresarial.</p>
-              <p>Esta carrera busca la formación de profesionales que tengan la capacidad de abordar con sentido
-                creativo, integral y ético el proceso de comunicación tanto a nivel institucional como organizacional,
-                siendo cónsono con el respeto a la dignidad humana. Los conocimientos permiten el desarrollo de
-                proyectos puntuales y la creación de propuestas innovadoras, centradas desde una visión periodística
-                hemerocrítica.</p>
-              <p>La carrera de Comunicación Corporativa ayuda al desarrollo de competencias de planificación y
-                evaluación de recursos, producción de contenidos digitales y periodísticos, manejo de las TIC, trabajo
-                en equipo y sentido ético.
-                Las personas egresadas de Comunicación Corporativa egresadas de la PUCMM se especializan en el diseño,
-                gestión y dirección de proyectos y producciones de comunicación manteniendo los principios éticos que
-                distinguen a los y las profesionales de la comunicación.</p>
-              <a type="button" class="btn pucmm-btn-primary text-uppercase" href="pensum-com-corporativa.pdf">Ver pénsum
-                »</a>
-              <br>
-              <br>
-              <div class="embed-responsive embed-responsive-16by9 center-block">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/cDCBZXfHNmk"></iframe>
-              </div><br>
+</section>
+<!-- fin pasantia carousel -->
 
-              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingOne">
-                    <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion"
-                        href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Competencias específicas de
-                        la titulación en
-                        Comunicación Corporativa </a> </h4>
-                  </div>
-                  <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-body">
-                      <ul>
-                        <li>Planificación y evaluación de recursos.</li>
-                        <li>Integración de esquemas epistemológicos de la comunicación.</li>
-                        <li>Interpretación de la dinámica de los medios de comunicación masivos.</li>
-                        <li>Valoración del contexto global para el ejercicio de la comunicación.</li>
-                        <li>Producción de contenidos digitales.</li>
-                        <li>Producción de contenido periodístico.</li>
-                        <li>Auditoría de la situación comunicacional de la entidad.</li>
-                        <li>Planificación de la comunicación corporativa.</li>
-                        <li>Diseño, gestión y dirección de proyectos y productos de comunicación.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingTwo">
-                    <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse"
-                        data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
-                        aria-controls="collapseTwo">Ventajas </a> </h4>
-                  </div>
-                  <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                    <div class="panel-body"> El nuevo pensum de la Licenciatura en Comunicación Corporativa se basa en
-                      un aprendizaje basado en
-                      competencias, con un 49 por ciento de materias especializadas en Comunicación Corporativa. Se
-                      mantiene el bloque de Estudio Generales, desarrollando las competencias claves de la PUCMM,
-                      complementadas con las competencias prácticas que ofrece la carrera. </div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingThree">
-                    <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse"
-                        data-parent="#accordion" href="#collapseThree" aria-expanded="false"
-                        aria-controls="collapseThree">Perfil del egresado </a> </h4>
-                  </div>
-                  <div id="collapseThree" class="panel-collapse collapse" role="tabpanel"
-                    aria-labelledby="headingThree">
-                    <div class="panel-body">
-                      <p> El Licenciado/La Licenciada en Comunicación Corporativa, egresado de la PUCMM:</p>
-                      <p>Está en capacidad de abordar con sentido creativo, integral y ético el proceso de comunicación
-                        tanto a nivel institucional como organizacional.</p>
-                      <p>Aplica un criterio crítico a su entorno, eligiendo la mejor alternativa en su actuar,
-                        contribuyendo a la resolución de problemas en un entorno dinámico.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="menu2" class="tab-pane fade">
-              <h3>Licenciatura en Comunicación Audiovisual y Artes Cinematográficas (COA)</h3>
-              <p>La licenciatura en Comunicación Audiovisual y Artes Cinematográficas se basa en un modelo educativo
-                basado en competencias, que garantiza altos niveles de congruencia entre el perfil de egreso y las
-                necesidades del mercado laboral.</p>
-              <p>Con un 50 por ciento de asignaturas específicas de la carrera, este plan de estudios posee mayor nivel
-                de especialización en el área audiovisual, que se complementan con conocimientos necesarios de
-                periodismo y de la comunicación en general.</p>
-              <p>Se proyecta que durante cuatro años el estudiantado realice producciones que abarcarán las áreas
-                propiamente audiovisuales (radio, televisión y cine), así como editoriales y digitales. Así mismo,
-                abordarán con sentido creativo, integral, y ético el proceso de comunicación y la producción de
-                contenidos.</p>
-              <a type="button" class="btn pucmm-btn-primary text-uppercase"
-                href="pensum-com-audiovisual-artes-cinematograficas.pdf">Ver pénsum »</a>
-              <br>
-              <br>
-              <div class="embed-responsive embed-responsive-16by9 center-block">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EgQUsvMOBS0"></iframe>
-              </div><br>
+<!-- egresados carousel -->
+<section>
 
-              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingOne">
-                    <h4 class="panel-title"> <a role="button" data-toggle="collapse" data-parent="#accordion"
-                        href="#collapse1" aria-expanded="true" aria-controls="collapseOne">Competencias específicas de
-                        la titulación en
-                        Comunicación Audiovisual y Artes Cinematográficas </a> </h4>
+  <div class="container-fluid pcajas carousel-bg">
+    <div class='row'>
+      <div class='col-md-12'>
+        <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+          <!-- Bottom Carousel Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#quote-carousel" data-slide-to="1"></li>
+            <li data-target="#quote-carousel" data-slide-to="2"></li>
+            <li data-target="#quote-carousel" data-slide-to="3"></li>
+          </ol>
+          
+          <div class="carousel-inner colheight">          
+            <!-- Quote 1 -->
+            <div class="item active">
+                <div class="row">
+                  <div class="col-sm-5 img-align">
+                    <img class="img-circle img-egresado" src="Julietta-Rodriguez.jpg">
                   </div>
-                  <div id="collapse1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                    <div class="panel-body">
-                      <ul>
-                        <li>Planificación y evaluación de recursos.</li>
-                        <li>Integración de esquemas epistemológicos de la comunicación.</li>
-                        <li>Interpretación de la dinámica de los medios de comunicación.</li>
-                        <li>Valoración del contexto global para el ejercicio de la comunicación.</li>
-                        <li>Producción de contenidos digitales.</li>
-                        <li>Producción de contenido periodístico.</li>
-                        <li>Estudio de las audiencias.</li>
-                        <li>Producción de relatos con identidad nacional.</li>
-                        <li>Análisis crítico de productos audiovisuales.</li>
-                        <li>Integración de esquemas epistemológicos de la comunicación audiovisual.</li>
-                        <li>Escritura de guiones.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingTwo">
-                    <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse"
-                        data-parent="#accordion" href="#collapse2" aria-expanded="false"
-                        aria-controls="collapseTwo">Ventajas </a> </h4>
-                  </div>
-                  <div id="collapse2" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                    <div class="panel-body">
-                      <p>La Licenciatura en Comunicación Audiovisual y Artes Cinematográficas posee un nuevo pensum
-                        reestructurado en base a un aprendizaje por competencias.</p>
-                      <p>Complementando el bloque de Estudios Generales de la PUCMM, la licenciatura cuenta con un 50
-                        por ciento de materias especializadas en áreas de radio, cine y televisión.</p>
-                    </div>
+                  <div class="col-sm-7 col-md-6 carousel-texto">
+                    <h2>Hablan nuestros egresados</h2>
+                    <p>"Lo que más agradezco de la Carrera de Comunicación Social es que durante mi educación me permitió́
+                      explorar y experimentar en todas sus áreas. Hoy soy una artista y profesional con la confianza de
+                      tener una base sólida y de haber contado con todas las herramientas para el pleno ejercicio de mi
+                      oficio".</p>
+                    <p><span>Julietta Rodriguez. Actriz-productora de cine</span><br>
+                      <small><strong>Perfil profesional:</strong><br>
+                        Protagonista de la opera prima de una de las primeras directoras mujeres de cine titulada ‘’La
+                        hija natural’’. Ganó un premio Iris a mejor supporting Actress por Flor de Azúcar, además, fue
+                        seleccionada en Talents de Guadalajara y de Berlín en la Berlinale, entre otros logros
+                        más.</small></p>
                   </div>
                 </div>
-                <div class="panel panel-default">
-                  <div class="panel-heading" role="tab" id="headingThree">
-                    <h4 class="panel-title"> <a class="collapsed" role="button" data-toggle="collapse"
-                        data-parent="#accordion" href="#collapse3" aria-expanded="false"
-                        aria-controls="collapseThree">Perfil del egresado </a> </h4>
-                  </div>
-                  <div id="collapse3" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                    <div class="panel-body">
-                      <p>El Licenciado/La Licenciada en Comunicación Audiovisual y Artes Cinematográficas, egresado de
-                        la PUCMM:</p>
-                      <ul>
-                        <li>En su desempeño profesional, tiene la capacidad de abordar con sentido creativo, integral y
-                          ético el proceso de comunicación, la producción de contenidos –y su respectivo proceso de
-                          elaboración-, así como la auscultación constante de las audiencias, teniendo como norte la
-                          emergencia de crear un lenguaje audiovisual con identidad nacional.</li>
-                        <li>Posee un alto nivel humanístico y competitivo en el manejo adecuado de los procesos de la
-                          comunicación audiovisual y la cinematografía, con el comportamiento mental que facilita el
-                          reconocimiento y el crecimiento de los modos de pensar que utilizamos en la resolución de
-                          algún problema o en la realización de alguna tarea.</li>
-                        <li>Tiene conciencia de sus recursos personales, desarrollándolos para superarse en la práctica,
-                          y aprovechando dichos recursos en el óptimo desempeño de las tareas encomendadas.</li>
-                        <li>La creación de proyectos audiovisuales y cinematográficos, de radio y televisión aptos para
-                          un mercado competitivo.</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
-            <div id="menu3" class="tab-pane fade">
-              <ul>
-                <li>
-                  <h3>Comunicación Corporativa</h3>
-                </li>
-                <p>El Comunicador Corporativo se desempeña en posiciones de gerente o director de Comunicación y/o
-                  Relaciones Públicas, asesor de imagen corporativo, gestión de la reputación en empresas privadas o
-                  públicas, tanto nacional como internacionalmente. Tendrá las competencias para el diseño, gestión y
-                  dirección de proyectos y productos de comunicación para el posicionamiento y gestión de comunicación
-                  de una empresa.</p>
-                <p>Entre otros puestos donde puede realizar su función son: Periodista, organizador de eventos
-                  corporativos, estratega en la comunicación digital, director de prensa, jefe de medios, entre otros.
-                </p>
-                <li>
-                  <h3>Comunicación Audiovisual y Artes Cinematográficas</h3>
-                </li>
-                <p>El Licenciado/La Licenciada en Comunicación Audiovisual y Artes Cinematográficas se desempaña en el
-                  creciente mercado audiovisual del país, con oportunidad en el desarrollo internacional, ejerciendo la
-                  creación de proyectos audiovisuales y cinematográficos, abarcando las áreas de dirección general,
-                  ejecutiva o en línea.</p>
-                <p>Entre algunos de los puestos donde puede realizar su función son: Productor de cine, asesor de guion,
-                  director de fotografía, director de casting, productor musical, entre otros. </p>
-              </ul>
-            </div>
-            <div id="menu4" class="tab-pane fade">
-              <div class="container-fluid">
+            <!-- Quote 2 -->
+            <div class="item">
                 <div class="row">
                   <div class="col-md-12">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <h3>Campus de Santo Domingo</h3>
-                        <h4>Dra. Ana Bélgica Güichardo</h4>
-                        <span class="title-cargo">Directora</span>
-                        <p><a href="mailto:anabguichardo@pucmm.edu.do">anabguichardo@pucmm.edu.do</a></p>
-                        <h4>Lic. Anny Rosa</h4>
-                        <span class="title-cargo">Secretaria</span> <br>
-                        <span><a href="mailto:annyrosa@pucmm.edu.do">annyrosa@pucmm.edu.do</a></span>
-                        <p>Teléfono: 809-535-0111 Ext. Escuela (2254)</p>
-                      </div>
-                      <div class="col-md-6">
-                        <h3>Campus de Santiago</h3>
-                        <h4>Lic. Alejandro Esteban</h4>
-                        <span class="title-cargo">Director</span>
-                        <p><a href="mailto:aesteban@pucmm.edu.do">aesteban@pucmm.edu.do</a></p>
-                        <h4>Lic. Selene Infante </h4>
-                        <span class="title-cargo">Secretaria</span><br>
-                        <span><a href="mailto:sinfante@pucmm.edu.do">sinfante@pucmm.edu.do</a></span>
-                        <p>Teléfono: 809 580-1962 Ext. Escuela (2254)</p>
-                      </div>
-                    </div>
+                        <div class="col-sm-5 img-align">
+                          <img class="img-circle img-egresado" src="Laura-Perez-Rojas.jpg">
+                        </div>
+                        <div class="col-sm-7 carousel-texto">
+                          <h2>Hablan nuestros egresados</h2>
+                          <p>"La comunicación es una carrera muy amplia, que permite a los profesionales desenvolverse en
+                            diferentes ámbitos, ya sea en medios de comunicación, en el Estado, en empresas privadas, en
+                            docencia,
+                            en investigación y de manera autónoma. Es una carrera hermosa donde la monotonía no existe y la
+                            responsabilidad, el compromiso, la ética debe de primar".</p>
+                          <p><span>Laura Pérez Rojas. Presentadora de noticias en CDN-37</span><br>
+                            <small><strong>Perfil profesional:</strong><br>Desempeña sus funciones en el canal de noticias
+                              CDN-37 en el segmento "Más que noticias". Desde temprana edad ha incursionado en los medios de
+                              comunicación, y con tan solo 15 años de edad debatía temas sociales en un programa de televisión
+                              por el canal 7.
+                            </small></p>
+                        </div>
                   </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <hr class="hr-bottom">
-          <div class="container-fluid">
-            <div class="row">
-              <div class="col-md-12">
+            <!-- Quote 3 -->
+            <div class="item">
                 <div class="row">
-                  <div class="col-md-6">
-                    <img class="imgcarrera" src="Imagen1.jpg" alt="">
+                  <div class="col-sm-5 img-align">
+                    <img class="img-circle img-egresado" src="Kharla-Polonio.jpg" >
                   </div>
-                  <div class="col-md-6">
-                    <img class="imgcarrera" src="Imagen2.jpg" alt="">
+                  <div class="col-sm-7 carousel-texto">
+                    <h2>Hablan nuestros egresados</h2>
+                    <p>"La mejor comunicación es la que se ejerce con pasión y respeto. Desde cualquier ámbito laboral,
+                      quien se dedica a este oficio, debe apostar por hacerlo de manera responsable, aportando a la
+                      sociedad
+                      y su democratización".</p>
+                    <p><span>Kharla Polonio. Especialista en Comunicación Audiovisual</span><br>
+                      <small><strong>Perfil profesional:</strong><br>Es coordinadora y presentadora de Informativos
+                        Teleantillas, desarrolla sus habilidades corporativas en el ámbito digital, maestría de ceremonias
+                        y locución.
+                      </small></p>
                   </div>
                 </div>
-              </div>
+            </div>
+            <!-- Quote 4 -->
+            <div class="item">
+                <div class="row">
+                  <div class="col-sm-5 img-align">
+                    <img class="img-circle img-egresado" src="Luis-Jose-Lopez-Luijo.jpg" >
+                  </div>
+                  <div class="col-sm-7 carousel-texto">
+                    <h2>Hablan nuestros egresados</h2>
+                    <p>"La comunicación corporativa ha adquirido una importancia vital en la mayoría de las
+                      organizaciones.
+                      Saber establecer y mantener relaciones positivas con las diferentes audiencias: públicos internos,
+                      inversionistas, clientes y proveedores, reguladores... Cuando se establece una comunicación
+                      coherente,
+                      se genera confianza que posibilita el éxito del negocio. Cuando la comunicación corporativa falla,
+                      se
+                      pone en riesgo futuro del negocio".</p>
+                    <p><span>Luis José López Luijo. Especialista en Comunicación Corporativa</span><br>
+                      <small><strong>Perfil profesional:</strong><br>Labora en Aeropuertos Dominicanos Siglo XXI
+                        (AERODOM). Realiza su función como director de Comunicación Corporativa y Responsabilidad Social
+                        Empresarial.
+                      </small></p>
+                  </div>
+                </div>
             </div>
           </div>
-          <!-- otra pagina -->
+          
+          <!-- Carousel Buttons Next/Prev -->
+          <a data-slide="prev" href="#quote-carousel" class="left carousel-control"><i class="fa fa-chevron-left"></i></a>
+          <a data-slide="next" href="#quote-carousel" class="right carousel-control"><i class="fa fa-chevron-right"></i></a>
+        </div>                          
+      </div>
+    </div>
+  </div>
+</section>
+<!-- fin egresados carousel -->
 
-          <!-- otra fin pagina -->
+<!-- movilidad -->
+<section class="pcajas">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row vertical-align">
+                    <div class="col-md-6 ">
+                        <h5>MOVILIDAD ESTUDIANTIL</h5>
+                        <h2>Experiencia internacional</h2>
+                        <p>En un mundo donde la preparación y las experiencias personales han adquirido relevancia para insertarse en un mundo laboral cada vez más global, es importante participar en actividades, programas y vivencias internacionales que ayuden a desarrollar</p>
+                            <a type="button" href="" class="btn pucmm-btn-primary" style="margin-bottom: 15px;">Conoce más</a>
+                            <a type="button" href="" class="btn pucmm-btn-warning" style="margin-bottom: 15px;">Ver programa</a>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="img-responsive" src="chica-internacional.png" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-  <div class="container-fluid video-form pcajas">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="row vertical-align">
-          <div class="col-md-6">
-            <div class="embed-responsive embed-responsive-16by9 center-block">
-              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/H0LVMgCn2ws"></iframe>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <script type="text/javascript" defer src="https://form.123formbuilder.com/embed/5852748.js" data-role="form"
-              data-default-width="650px"></script>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="container-fluid pasantia">
-    <h2 class="text-center">Pasantía</h2>
-    <div class="row">
-      <div class="col-md-12">
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            <li data-target="#myCarousel" data-slide-to="3"></li>
-          </ol>
-        
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active text-center">
-              <div class="col-md-6"><img src="DL.jpg" alt=""></div>
-              <div class="col-md-6"><img src="CDN.jpg" alt=""></div>
-            </div>
-            <div class="item text-center">
-              <div class="col-md-6"><img src="LD.jpg" alt=""></div>
-              <div class="col-md-6"><img src="mediaticos.jpg" alt=""></div>
-            </div>
-            <div class="item text-center">
-              <div class="col-md-6"><img src="NLINK.jpg" alt=""></div>
-              <div class="col-md-6"><img src="SC.jpg" alt=""></div>
-            </div>
-            <div class="item text-center">
-                <div class="col-md-12"><img src="TRA.jpg" alt=""></div>
-            </div>
-          </div>
-        
-          <!-- Left and right controls -->
-          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+</section>
+<!-- fin movilidad -->
 
-  <!-- egresados -->
-  <div class="container-fluid pcajas carousel-bg">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
-      <ol class="carousel-indicators">
-        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-      </ol>
-
-      <!-- Wrapper for slides -->
-      <div class="carousel-inner" role="listbox">
-        <div class="item active">
-          <div class="container">
-            <div class="row vertical-align">
-              <div class="col-md-12 colheight" style="margin: auto ">
-              	<div class="row">
-                <div class="col-md-5 carousel-img text-right"><img class="img-fluid img-circle" src="Julietta-Rodriguez.jpg"></div>
-                <div class="col-md-7 carousel-texto">
-                  <h2>Hablan nuestros egresados</h2>
-                  <p>"Lo que más agradezco de la Carrera de Comunicación Social es que durante mi educación me permitió́
-                    explorar y experimentar en todas sus áreas. Hoy soy una artista y profesional con la confianza de
-                    tener una base sólida y de haber contado con todas las herramientas para el pleno ejercicio de mi
-                    oficio".</p>
-                  <p><span>Julietta Rodriguez. Actriz-productora de cine</span><br>
-                    <small><strong>Perfil profesional:</strong><br>
-                      Protagonista de la opera prima de una de las primeras directoras mujeres de cine titulada ‘’La
-                      hija natural’’. Ganó un premio Iris a mejor supporting Actress por Flor de Azúcar, además, fue
-                      seleccionada en Talents de Guadalajara y de Berlín en la Berlinale, entre otros logros
-                      más.</small></p>
-                </div>
-              </div>
-			</div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="container">
-            <div class="row vertical-align">
-              <div class="col-md-12 colheight" style="margin: auto">
-                <div class="col-md-5 carousel-img text-right"><img class="img-fluid img-circle"
-                    src="Laura-Perez-Rojas.jpg"> </div>
-                <div class="col-md-7 carousel-texto">
-                  <h2>Hablan nuestros egresados</h2>
-                  <p>"La comunicación es una carrera muy amplia, que permite a los profesionales desenvolverse en
-                    diferentes ámbitos, ya sea en medios de comunicación, en el Estado, en empresas privadas, en
-                    docencia,
-                    en investigación y de manera autónoma. Es una carrera hermosa donde la monotonía no existe y la
-                    responsabilidad, el compromiso, la ética debe de primar".</p>
-                  <p><span>Laura Pérez Rojas. Presentadora de noticias en CDN-37</span><br>
-                    <small><strong>Perfil profesional:</strong><br>Desempeña sus funciones en el canal de noticias
-                      CDN-37 en el segmento "Más que noticias". Desde temprana edad ha incursionado en los medios de
-                      comunicación, y con tan solo 15 años de edad debatía temas sociales en un programa de televisión
-                      por el canal 7.
-                    </small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="container">
-            <div class="row vertical-align">
-              <div class="col-md-12 colheight" style="margin: auto">
-                <div class="col-md-5 carousel-img text-right"><img class="img-fluid img-circle"
-                    src="Kharla-Polonio.jpg"> </div>
-                <div class="col-md-7 carousel-texto">
-                  <h2>Hablan nuestros egresados</h2>
-                  <p>"La mejor comunicación es la que se ejerce con pasión y respeto. Desde cualquier ámbito laboral,
-                    quien se dedica a este oficio, debe apostar por hacerlo de manera responsable, aportando a la
-                    sociedad
-                    y su democratización".</p>
-                  <p><span>Kharla Polonio. Especialista en Comunicación Audiovisual</span><br>
-                    <small><strong>Perfil profesional:</strong><br>Es coordinadora y presentadora de Informativos
-                      Teleantillas, desarrolla sus habilidades corporativas en el ámbito digital, maestría de ceremonias
-                      y locución.
-                    </small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <div class="container">
-            <div class="row vertical-align">
-              <div class="col-md-12 colheight" style="margin: auto">
-                <div class="col-md-5 carousel-img text-right"><img class="img-fluid img-circle"
-                    src="Luis-Jose-Lopez-Luijo.jpg"> </div>
-                <div class="col-md-7 carousel-texto">
-                  <h2>Hablan nuestros egresados</h2>
-                  <p>"La comunicación corporativa ha adquirido una importancia vital en la mayoría de las
-                    organizaciones.
-                    Saber establecer y mantener relaciones positivas con las diferentes audiencias: públicos internos,
-                    inversionistas, clientes y proveedores, reguladores... Cuando se establece una comunicación
-                    coherente,
-                    se genera confianza que posibilita el éxito del negocio. Cuando la comunicación corporativa falla,
-                    se
-                    pone en riesgo futuro del negocio".</p>
-                  <p><span>Luis José López Luijo. Especialista en Comunicación Corporativa</span><br>
-                    <small><strong>Perfil profesional:</strong><br>Labora en Aeropuertos Dominicanos Siglo XXI
-                      (AERODOM). Realiza su función como director de Comunicación Corporativa y Responsabilidad Social
-                      Empresarial.
-                    </small></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Controls -->
-      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev"> <span
-          class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a>
-      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next"> <span
-          class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
-    </div>
-  </div>
-  <section class="pcajas">
-    <div class="container ">
-	<div class="row">
-		<div class="col-md-12">
-			<div class="row vertical-align">
-        <div class="col-md-6">
-          <h5>MOVILIDAD ESTUDIANTIL</h5>
-          <h2 style="margin-bottom: 25px;">Experiencia internacional</h2>
-          <p>En un mundo donde la preparación y las experiencias personales han adquirido relevancia para insertarse en
-            un mundo laboral cada vez más global, es importante participar en actividades, programas y vivencias
-            internacionales que ayuden a desarrollar</p>
-          <a class="btn pucmm-btn-warning text-uppercase"
-            href="https://www.pucmm.edu.do/movilidad-estudiantil/sobre/oficina-estudiantes-internacionales">Conoce
-            más</a>
-          <a class="btn pucmm-btn-primary text-uppercase"
-            href="https://www.pucmm.edu.do/movilidad-estudiantil/estudiantes-pucmm/programas">Ver programa</a>
-        </div>
-				<div class="col-md-6"> <img class="img-fluid" src="chica-internacional.png" alt=""> 
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-  </section>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
-
 </html>
