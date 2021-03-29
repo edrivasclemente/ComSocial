@@ -94,6 +94,7 @@ h1 {
     text-align: left;
     width: 100%;
     padding: 15px;
+    border-radius: 0;
   }
   .pucmm-btn-adm:hover {
     color: #001970;
