@@ -142,7 +142,7 @@ ul.menu2-left>.list-group-item {
 
 .com-tab{
   border-bottom: 3px solid #001970;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 .com-tab>li>a {
   padding: 30px 25px;
@@ -216,7 +216,7 @@ ul.menu2-left>.list-group-item {
   font-weight: bold;
 }
 .carousel-bg .carousel-indicators {
-  width: 51%;
+  left: 45%;
   bottom: 0px !important;
 }
 .carousel-indicators .active {
@@ -225,6 +225,9 @@ ul.menu2-left>.list-group-item {
 .carousel-indicators li {
   border: 1px solid #001970;
 }
+/* .flecha{
+  color: #001970;
+} */
 .colheight {
   height: 410px;
 }
