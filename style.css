@@ -55,7 +55,6 @@ h1 {
     color: #fff;
     background-color: #001970;
     border-color: #001970;
-    text-align: left;
     border-radius: 30px;
   }
   .pucmm-btn-primary:hover {
@@ -241,17 +240,12 @@ ul.menu2-left>.list-group-item {
 }
 /* .back-mov >iframe{
   z-index: 1;
-}
-.back-mov {
-  display: grid;
-  padding-right: 45px;
 }*/
+
 .back-mov::before {
   content: url(bgazul.jpg);
   position: absolute;
-  z-index: -1; 
-  right: 110px;
-  width: 630px;
+  right: 110px; 
 } 
 
 @media (max-width: 992px){
@@ -268,4 +262,7 @@ ul.menu2-left>.list-group-item {
   .carousel-texto {
     width: 100%;
   }
+  .back-mov::before {
+    content: '';
+  } 
 }
