@@ -245,14 +245,14 @@ ul.menu2-left>.list-group-item {
 .back-mov {
   display: grid;
   padding-right: 45px;
-}
+}*/
 .back-mov::before {
   content: url(bgazul.jpg);
   position: absolute;
   z-index: -1; 
   right: 110px;
   width: 630px;
-} */
+} 
 
 @media (max-width: 992px){
   .colheight {
@@ -265,4 +265,7 @@ ul.menu2-left>.list-group-item {
     display: block;
     align-items: center;
   } 
+  .carousel-texto {
+    width: 100%;
+  }
 }
