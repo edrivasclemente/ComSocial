@@ -232,15 +232,16 @@ ul.menu2-left>.list-group-item {
 .carousel-indicators li {
   border: 1px solid #001970;
 }
-/* .flecha{
+.flecha{
   color: #001970;
-} */
+} 
+.flecha>.glyphicon{
+  color: #001970;
+}
+
 .colheight {
   height: 410px;
 }
-/* .back-mov >iframe{
-  z-index: 1;
-}*/
 
 .back-mov::before {
   content: url(bgazul.jpg);
